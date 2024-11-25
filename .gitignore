@@ -5,7 +5,17 @@
 /tmp
 /out-tsc
 /bazel-out
+/public
 
+# Firebase
+/functions/heroauth-97aa7-firebase-adminsdk-4q4wa-62f9e75caa.json
+/src/environments/environments.ts
+/src/environments/environments.prod.ts
+/functions/node_modules
+/.firebase
+/dist
+.firebaserc
+firebase.json
 # Node
 /node_modules
 npm-debug.log
