@@ -1,1 +1,27 @@
-<p>sign-up works!</p>
+<div class="card" >
+    <div class="card-body">
+      <h5 class="card-title mb-4">Sign Up</h5>
+    
+
+        <div class="form-floating">
+          <input [(ngModel)]="email" type="email" class="form-control my-2" id="email" placeholder="E-mail">
+          <label for="email">E-mail</label>
+        </div>
+        <div class="form-floating">
+          <input [(ngModel)]="password" type="password" class="form-control my-2" id="pass" placeholder="Passwpord">
+          <label for="pass">Password</label>
+        </div>
+        <div class="form-floating">
+          <input [(ngModel)]="confirmPassword" type="password" class="form-control my-2" id="pass2" placeholder="Passwpord">
+          <label for="pass2">Password</label>
+        </div>
+        <button (click)="signUpEmailPassword()" [disabled]="!email || !password || (password!=confirmPassword)" type="button" class="btn btn-primary my-2">Registration</button>
+        <button (click)="googleAuth()" type="button" class="btn btn-primary ms-2">Contiune with Google</button>
+        <div class="my-3">
+            <div>Alredy have an account?</div>
+            <button routerLink="/signin" type="button" class="btn btn-primary my-2">Login</button>
+        </div>
+      </div>
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    
+  </div>

@@ -15,13 +15,17 @@ import {AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from '../environments/environments';
 import { provideHttpClient } from '@angular/common/http';
+import { UsersComponent } from './users/users.component';
+import { VerifymailComponent } from './verifymail/verifymail.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SignInComponent,
     SignUpComponent,
-    HeroContactComponent
+    HeroContactComponent,
+    UsersComponent,
+    VerifymailComponent
   ],
   imports: [
     BrowserModule,

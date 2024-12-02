@@ -1,0 +1,11 @@
+
+{{users|json}}
+
+<div *ngFor="let user of users" class="row my-2">
+    <div class="col">{{user.email}}</div>
+    <div class="col">{{user.displayName}}</div>
+    <div class="col">{{user.claims|json}}</div>
+    <div class="col">
+        <button (click)="setCustomClaims(user.uid)" type="button" class="btn btn-primary">Add admin</button>
+    </div>
+</div>

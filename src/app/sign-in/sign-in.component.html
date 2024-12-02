@@ -1,1 +1,29 @@
-<p>sign-in works!</p>
+<div class="card" >
+    <div class="card-body">
+      <h5 class="card-title">Sign In</h5>
+    
+
+        <div class="form-floating">
+          <input [(ngModel)]="email" type="email" class="form-control my-2" id="email" placeholder="E-mail">
+          <label for="email">E-mail</label>
+        </div>
+        <div class="form-floating">
+          <input [(ngModel)]="password" type="password" class="form-control my-2" id="pass" placeholder="Passwpord">
+          <label for="pass">Password</label>
+        </div>
+        <div *ngIf="error" class="alert alert-danger" role="alert">
+            {{errorText|json}}
+        </div>
+        <div *ngIf="sendReset" class="alert alert-success" role="alert">
+            Mail is sent!
+          </div>
+        <button (click)="signIn()" [disabled]="!email || !password" type="button" class="btn btn-primary my-2">Login</button>
+        <button (click)="forgotMail()" [disabled]="!email" type="button" class="btn btn-primary ms-2">Forgot password</button>
+
+        <div>
+            <button (click)="googleAuth()" type="button" class="btn btn-primary mt-2">Login with Google</button>
+        </div>
+      </div>
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+    
+  </div>
